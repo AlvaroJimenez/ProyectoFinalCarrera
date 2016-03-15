@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_footer"
+    tools:context="net.sgoliver.android.navigationdrawer.Fragment2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/linearLayout2"
+        android:background="#BBDEFB"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="D6001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_gravity="center"
+            android:textStyle="bold|normal"
+            android:textIsSelectable="true"
+            android:textSize="30dp"
+            android:id="@+id/textSala"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <ListView
+
+        android:id="@+id/listView"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:longClickable="false"
+        android:nestedScrollingEnabled="true"
+        android:height="?android:attr/listPreferredItemHeight"
+        android:textFilterEnabled="false"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:layout_marginTop="30dp"
+        android:background="@color/background_footer"
+        android:clickable="false"
+        android:focusable="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No hay dispositivos en esta sala"
+        android:id="@+id/infoText"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:visibility="invisible" />
+
+
+</FrameLayout>
+<!-- From: file:/C:/Users/alvar/Desktop/TFG2/TFG2/app/src/main/res/layout/fragment_fragment2.xml -->

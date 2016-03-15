@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.alvar.tfg.Salad60">
+
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="450dp"
+        android:id="@+id/s201"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="s101"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"></TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/S115"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S102"
+        android:layout_below="@+id/S108"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/s201" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/S108"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S109"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/S108"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S108"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="83dp"
+        android:layout_height="100dp"
+        android:id="@+id/stairs1"
+        android:background="@drawable/stairs_u"
+        android:layout_column="1"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/s201" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/S107"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S107"
+        android:layout_above="@+id/S108"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/S106"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S106"
+        android:layout_above="@+id/S107"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/S105"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S105"
+        android:layout_above="@+id/S106"
+        android:layout_alignStart="@+id/S106" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/S104B"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S104B"
+        android:layout_above="@+id/S105"
+        android:layout_alignStart="@+id/S105" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/S104A"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S104A"
+        android:layout_above="@+id/S104B"
+        android:layout_alignStart="@+id/S104B" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/S103"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S103"
+        android:layout_above="@+id/S104A"
+        android:layout_alignStart="@+id/S108"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/s201" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/S115"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S115"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/S103"
+        android:layout_alignEnd="@+id/S104A" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:id="@+id/gates"
+        android:background="@drawable/gates_l"
+        android:layout_column="1"
+        android:layout_above="@+id/S103"
+        android:layout_alignEnd="@+id/S104A"
+        android:layout_below="@+id/S115" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/S117"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S117"
+        android:layout_below="@+id/S115"
+        android:layout_alignStart="@+id/S103"
+        android:layout_alignBottom="@+id/gates" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/S104"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S104"
+        android:layout_alignTop="@+id/S104A"
+        android:layout_toStartOf="@+id/S104B"
+        android:layout_alignBottom="@+id/S104B" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/S102"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="S102"
+        android:layout_above="@+id/s201"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/alvar/Desktop/TFG2/TFG2/app/src/main/res/layout/salad6s1.xml -->

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView_listview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_selector"
+    android:drawableRight="@drawable/device"
+    android:textAppearance="@android:style/TextAppearance.Holo.DialogWindowTitle"
+    android:textColor="@android:color/black"
+    android:height="100dp"
+    android:text="Computer \n d6101"
+    android:minLines="2"
+    android:singleLine="false"
+    android:ellipsize="end"
+    android:textStyle="bold"
+    android:textAlignment="textStart"
+    android:layout_margin="15dp"
+    android:padding="15dp"
+    android:layout_marginTop="5dp"
+    android:gravity="center" />

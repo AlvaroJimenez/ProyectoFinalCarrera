@@ -1,0 +1,223 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.alvar.tfg.Salad62">
+
+    <TextView
+        android:layout_width="155dp"
+        android:layout_height="70dp"
+        android:id="@+id/s201"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="201"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s202"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="202"
+        android:layout_above="@+id/s201"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s003"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="203"
+        android:layout_above="@+id/s202"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s204"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="204"
+        android:layout_above="@+id/s003"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s205"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="205"
+        android:layout_above="@+id/s204"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s206"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="206"
+        android:layout_above="@+id/s205"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s207"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="207"
+        android:layout_above="@+id/s206"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s208"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="208"
+        android:layout_above="@+id/s207"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s210"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="210"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="155dp"
+        android:layout_height="70dp"
+        android:id="@+id/s218"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="218"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/s222"
+        android:layout_below="@+id/s217" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s213"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="213"
+        android:layout_below="@+id/s212"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/s207" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s212"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="212"
+        android:layout_below="@+id/s211"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s211"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="211"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s214"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="214"
+        android:layout_below="@+id/s213"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s222"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="222"
+        android:layout_below="@+id/s227"
+        android:layout_alignStart="@+id/s227"
+        android:layout_above="@+id/s206" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s216"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="216"
+        android:layout_alignEnd="@+id/s218"
+        android:layout_below="@+id/s206" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s217"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="217"
+        android:layout_below="@+id/s216"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s227"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="227"
+        android:layout_below="@+id/s211"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s209"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="209"
+        android:layout_above="@+id/s208"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/s210" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s221"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="221"
+        android:layout_below="@+id/s222"
+        android:layout_alignStart="@+id/s222"
+        android:layout_above="@+id/s204" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:id="@+id/s215"
+        android:background="@drawable/my_border"
+        android:layout_column="1"
+        android:text="215"
+        android:layout_below="@+id/s214"
+        android:layout_alignEnd="@+id/s218" />
+
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/alvar/Desktop/TFG2/TFG2/app/src/main/res/layout/salad62.xml -->

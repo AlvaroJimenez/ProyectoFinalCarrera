@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="102"
+        android:id="@+id/s102"
+        android:background="@drawable/my_border"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="103"
+        android:id="@+id/s103"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s102"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="104"
+        android:id="@+id/s104"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s103"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="105"
+        android:id="@+id/s105"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s104"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="106"
+        android:id="@+id/s106"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s105"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="106"
+        android:id="@+id/textView"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s106"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="107"
+        android:id="@+id/s107"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="108"
+        android:id="@+id/s108"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s107"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="109"
+        android:id="@+id/s109"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s108"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="110"
+        android:id="@+id/s110"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s109"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="122"
+        android:id="@+id/s122"
+        android:background="@drawable/my_border"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="121"
+        android:id="@+id/s121"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s122"
+        android:layout_alignStart="@+id/s122" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="120"
+        android:id="@+id/s120"
+        android:background="@drawable/my_border"
+        android:layout_alignTop="@+id/s104"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="119"
+        android:id="@+id/s218"
+        android:background="@drawable/my_border"
+        android:layout_alignBottom="@+id/s105"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="118"
+        android:id="@+id/s118"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s218"
+        android:layout_alignStart="@+id/s218" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="117"
+        android:id="@+id/s117"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s118"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="116"
+        android:id="@+id/s116"
+        android:background="@drawable/my_border"
+        android:layout_alignTop="@+id/s107"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="115"
+        android:id="@+id/s115"
+        android:background="@drawable/my_border"
+        android:layout_alignBottom="@+id/s108"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="114"
+        android:id="@+id/s114"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s115"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="113"
+        android:id="@+id/s113"
+        android:background="@drawable/my_border"
+        android:layout_above="@+id/s114"
+        android:layout_alignStart="@+id/s114"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="102"
+        android:id="@+id/textView3"
+        android:background="@drawable/my_border"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/s102" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="102"
+        android:id="@+id/textView4"
+        android:background="@drawable/my_border"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/s122" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="114"
+        android:id="@+id/textView5"
+        android:background="@drawable/my_border"
+        android:layout_below="@+id/s114"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="110"
+        android:id="@+id/textView6"
+        android:background="@drawable/my_border"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/s110" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="113"
+        android:id="@+id/textView7"
+        android:background="@drawable/my_border"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/s113" />
+</RelativeLayout><!-- From: file:/C:/Users/alvar/Desktop/TFG2/TFG2/app/src/main/res/layout/salac61.xml -->

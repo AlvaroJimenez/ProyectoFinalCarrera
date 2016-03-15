@@ -1,0 +1,290 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:baselineAligned="true">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="175dp"
+                android:layout_height="130dp"
+                card_view:cardBackgroundColor="#FFFFFF" >
+
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="85dp"
+                    android:background="#000000" />
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="d6101"
+                android:id="@+id/location"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Ubication"
+                android:id="@+id/textView9"
+                android:textStyle="bold"
+                android:textColor="#47a842"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="18dp"
+                android:textIsSelectable="true" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/mapa"
+                android:layout_gravity="right|bottom" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                card_view:cardBackgroundColor="#FFFFFF">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/humidity"
+                    android:layout_gravity="bottom|right"
+                    android:background="#ffffff"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Room temperature"
+                    android:id="@+id/textView11"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#47a842"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="20"
+                    android:id="@+id/tempSensorLabel"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="15dp"
+                    android:singleLine="false"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        card_view:cardBackgroundColor="#FFFFFF" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Change room temperature"
+            android:id="@+id/textView9"
+            android:textStyle="bold"
+            android:textColor="#47a842"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ON/OFF"
+            android:id="@+id/textView10"
+            android:textColor="#47a842"
+            android:textStyle="bold"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:visibility="visible"
+            android:layout_marginTop= "-60dp"
+            android:layout_marginLeft="60dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="ON"
+            android:id="@+id/on_off_info"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:textSize="30dp"
+            android:layout_marginTop= "-30dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="#0abb0a" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:visibility="visible"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:max="40"
+            android:indeterminate="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="23"
+            android:id="@+id/tempDigits"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:singleLine="true"
+            android:textSize="40dp" />
+
+    </android.support.v7.widget.CardView>
+
+
+        <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/buttonSend"
+        android:layout_width="102dp"
+        android:layout_height="50dp"
+        android:text="Enviar"
+        android:drawableRight="@android:drawable/ic_menu_send"
+        android:layout_gravity="center_horizontal|bottom"
+        android:textColor="#ffffff"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#f90606" />
+
+
+    </FrameLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        app:backgroundTint="#3296f3"
+        android:layout_marginRight="-5dp"
+        android:visibility="gone" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        android:layout_gravity="center"
+        app:backgroundTint="#f44336"
+        android:layout_marginTop="-5dp"
+        android:layout_marginRight="-1dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/tableLayout"
+        android:id="@+id/infoLayout"
+        android:background="#BBDEFB"
+        android:visibility="visible"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ya esta suscrito a este dispositivo"
+            android:id="@+id/textView8"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_above="@+id/addButton"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView3"
+            android:background="@drawable/success"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

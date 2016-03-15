@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#3296f3</color>
+    <color name="color_primary_dark">#303F9F</color>
+    <color name="color_accent">#FFFFFF</color>
+    <color name="background">#e9dede</color>
+
+    <color name="darkPrimaryColor">#7B1FA2</color>
+    <color name="primaryColor">#9C27B0</color>
+    <color name="accentColor">#00BCD4</color>
+    <color name="pressed">#98dff3</color>
+
+    <color name="backgroundColor">#212121</color>
+
+    <color name="background_footer">#F1F1F1</color>
+
+    <drawable name="highlight_pressed">#98dff3</drawable>
+    <drawable name="highlight_focused">#b9e6f3</drawable>
+</resources>

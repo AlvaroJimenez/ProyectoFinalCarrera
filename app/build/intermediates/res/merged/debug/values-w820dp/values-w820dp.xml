@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/alvar/Desktop/TFG2/TFG2/app/src/main/res/values-w820dp/valores_array.xml -->
+    <eat-comment/>
+    <string-array name="valores_array">
+        <item>D6</item>
+        <item>C6</item>
+    </string-array>
+    <!-- From: file:/C:/Users/alvar/Desktop/TFG2/TFG2/app/src/main/res/values-w820dp/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+</resources>

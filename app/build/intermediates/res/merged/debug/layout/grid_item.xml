@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/imagenSensor"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:scaleType="centerCrop"
+        android:transitionName="@string/nombre_transicion_imagen"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/nombre_coche"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/rounded_corner"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+</FrameLayout>
+
+    <!--android:background="@drawable/layer_card_background"--><!-- From: file:/C:/Users/alvar/Desktop/TFG2/TFG2/app/src/main/res/layout/grid_item.xml -->

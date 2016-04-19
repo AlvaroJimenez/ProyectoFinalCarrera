@@ -8,7 +8,7 @@
         android:layout_height="100dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="201"
-        android:id="@+id/s201"
+        android:id="@+id/sS101"
         android:background="@drawable/my_border"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
@@ -20,7 +20,7 @@
         android:text="202"
         android:id="@+id/s202"
         android:background="@drawable/my_border"
-        android:layout_above="@+id/s201"
+        android:layout_above="@+id/sS101"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -95,7 +95,7 @@
         android:layout_alignBottom="@+id/s212" />
 
     <TextView
-        android:layout_width="183dp"
+        android:layout_width="160dp"
         android:layout_height="100dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="221"
@@ -129,7 +129,7 @@
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="218"
-        android:id="@+id/s218"
+        android:id="@+id/s119"
         android:background="@drawable/my_border"
         android:layout_above="@+id/s219"
         android:layout_alignParentEnd="true" />
@@ -142,7 +142,7 @@
         android:id="@+id/s217"
         android:background="@drawable/my_border"
         android:layout_alignBottom="@+id/s204"
-        android:layout_alignEnd="@+id/s218" />
+        android:layout_alignEnd="@+id/s119" />
 
     <TextView
         android:layout_width="100dp"
@@ -186,14 +186,14 @@
         android:layout_above="@+id/s213" />
 
     <TextView
-        android:layout_width="183dp"
-        android:layout_height="100dp"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="210"
         android:id="@+id/s210"
         android:background="@drawable/my_border"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/s208" />
 
     <TextView
         android:layout_width="100dp"

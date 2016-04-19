@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Selecciona una sala"
+            android:text="Selecciona una sala D6"
             android:id="@+id/textView1"
             android:layout_weight="1"
             android:layout_marginTop="5dp"
@@ -69,10 +69,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Seleccione una sala"
             android:id="@+id/textView2"
             android:layout_marginTop="5dp"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:text="Seleccione una sala C6" />
 
     </FrameLayout>
 

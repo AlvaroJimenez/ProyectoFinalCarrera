@@ -5,7 +5,7 @@
     <TextView
         android:layout_width="155dp"
         android:layout_height="70dp"
-        android:id="@+id/s201"
+        android:id="@+id/sS101"
         android:background="@drawable/my_border"
         android:layout_column="1"
         android:text="201"
@@ -19,13 +19,13 @@
         android:background="@drawable/my_border"
         android:layout_column="1"
         android:text="202"
-        android:layout_above="@+id/s201"
+        android:layout_above="@+id/sS101"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="95dp"
         android:layout_height="55dp"
-        android:id="@+id/s003"
+        android:id="@+id/s203"
         android:background="@drawable/my_border"
         android:layout_column="1"
         android:text="203"
@@ -39,7 +39,7 @@
         android:background="@drawable/my_border"
         android:layout_column="1"
         android:text="204"
-        android:layout_above="@+id/s003"
+        android:layout_above="@+id/s203"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -95,7 +95,7 @@
     <TextView
         android:layout_width="155dp"
         android:layout_height="70dp"
-        android:id="@+id/s218"
+        android:id="@+id/s119"
         android:background="@drawable/my_border"
         android:layout_column="1"
         android:text="218"
@@ -163,7 +163,7 @@
         android:background="@drawable/my_border"
         android:layout_column="1"
         android:text="216"
-        android:layout_alignEnd="@+id/s218"
+        android:layout_alignEnd="@+id/s119"
         android:layout_below="@+id/s206" />
 
     <TextView
@@ -216,7 +216,7 @@
         android:layout_column="1"
         android:text="215"
         android:layout_below="@+id/s214"
-        android:layout_alignEnd="@+id/s218" />
+        android:layout_alignEnd="@+id/s119" />
 
 
 </RelativeLayout>

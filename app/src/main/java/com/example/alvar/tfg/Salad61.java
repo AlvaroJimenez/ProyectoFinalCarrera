@@ -36,15 +36,15 @@ public class Salad61 extends Fragment {
         View view = inflater.inflate(R.layout.salad61,
                 container, false);
 
-        TextView s1 = (TextView)view.findViewById(R.id.s101);
-        TextView s2 = (TextView) view.findViewById(R.id.s102);
-        TextView s3 = (TextView) view.findViewById(R.id.s103);
+        TextView s1 = (TextView)view.findViewById(R.id.sS101);
+        TextView s2 = (TextView) view.findViewById(R.id.sS102);
+        TextView s3 = (TextView) view.findViewById(R.id.sS103);
         TextView s4 = (TextView) view.findViewById(R.id.s104);
         TextView s5 = (TextView) view.findViewById(R.id.s105);
         TextView s6 = (TextView) view.findViewById(R.id.s106);
         TextView s7 = (TextView) view.findViewById(R.id.s107);
-        TextView s8 = (TextView) view.findViewById(R.id.s108);
-        TextView s9 = (TextView) view.findViewById(R.id.s109);
+        TextView s8 = (TextView) view.findViewById(R.id.sS109);
+        TextView s9 = (TextView) view.findViewById(R.id.sS109);
         TextView s10 = (TextView) view.findViewById(R.id.s110);
         TextView s11 = (TextView) view.findViewById(R.id.s111);
         TextView s12 = (TextView) view.findViewById(R.id.s112);
@@ -322,17 +322,25 @@ public class Salad61 extends Fragment {
 
     private void drawDevice(String sala, TextView t)
     {
+
         int a = 0;
         int b = 0;
         int c = 0;
         int d = 0;
 
-        if(cjtSensores.existDevice("Computer",sala))
-            a = R.drawable.pcmap;
-        if(cjtSensores.existDevice("Light",sala))
-            b = R.drawable.lightmap;
-        if(cjtSensores.existDevice("XM1000", sala))
-            c = R.drawable.tempmap;
+        if(cjtSensores.existTypeSensorBySala(sala) && cjtSensores.existTypeActuatorBySala(sala)) {
+            a = R.drawable.a;
+
+        }
+        else if (cjtSensores.existTypeActuatorBySala(sala) && !cjtSensores.existTypeActuatorBySala(sala)) {
+            b = R.drawable.s;
+            System.out.println("Encontrado");
+
+        }
+        else if(cjtSensores.existTypeSensorBySala(sala))
+            b = R.drawable.s;
+
+
 
         t.setCompoundDrawablesWithIntrinsicBounds(a,b,c,d);
     }

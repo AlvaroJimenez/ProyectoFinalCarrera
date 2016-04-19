@@ -120,9 +120,24 @@ import java.net.URLEncoder;
 
                     int pos = Cache.getInstance().allCjtSensores.getPosById(M2MIO_STUFF);
                     Cache.getInstance().allCjtSensores.updateSensor(pos, valueTemp, valueHum);
-                } else if (tipo.equals("Computer") || tipo.equals("Light")) {
+                } else if (tipo.equals("Computer")) {
                     int valor = json.getJSONObject("channels").getJSONObject("computer").getInt("current-value");
                     Cache.getInstance().allCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
+                }
+                else if(tipo.equals("Light"))
+                {
+                    int valor = json.getJSONObject("channels").getJSONObject("light").getInt("current-value");
+                    Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
+                }
+                else if(tipo.equals("Presence"))
+                {
+                    int valor = json.getJSONObject("channels").getJSONObject("presence").getInt("current-value");
+                    Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
+                }
+                else if(tipo.equals("AirQuality"))
+                {
+                    int valor = json.getJSONObject("channels").getJSONObject("airquality").getInt("current-value");
+                    Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
                 }
             } catch (JSONException e) {
                 // TODO Auto-generated catch block

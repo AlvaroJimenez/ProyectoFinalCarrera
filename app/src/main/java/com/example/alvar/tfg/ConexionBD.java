@@ -113,7 +113,8 @@ public class ConexionBD {
 
 
                     SessionManager session1 = new SessionManager(context);
-                    int id_user = session1.getIDUser();
+                //    int id_user = session1.getIDUser();
+                    int id_user = 3;
 
 
                     Class.forName("org.postgresql.Driver");
@@ -205,7 +206,7 @@ public class ConexionBD {
                     String stsq1 =null;
                     String stsq2 =null;
 
-                    stsq1 = "SELECT u.id FROM \"user\" u WHERE u.name ='"+username+"'";
+                    stsq1 = "SELECT * from \"user\" u WHERE u.name ='"+username+"'";
 
                     System.out.print("USERNAME"  + username);
 
@@ -219,14 +220,22 @@ public class ConexionBD {
 
                     int i = 0;
                     int id_user = -1;
+                    String rights = null;
+                    String key = null;
 
                     while(rs1.next()) {
                        id_user= Integer.parseInt(rs1.getString(1));
+                        rights = rs1.getString(4);
+                        key = rs1.getString(5);
+
+
                       //  System.out.print("ID USER1 " + id_user);
 
                         i++;
                     }
-                    session.setKeyUser(id_user);
+                    System.out.println("RIGHTS "+rights);
+                    System.out.println("KEY "+key);
+                    session.setUser(id_user,rights,key);
 
                   //  System.out.print("ID USER2 " + session.getIDUser());
 

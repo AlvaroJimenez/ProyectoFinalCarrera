@@ -94,6 +94,7 @@ public class ControllerPower extends Fragment {
         final SessionManager session = new SessionManager(getActivity().getApplicationContext());
         HashMap<String, String> user = session.getUserDetails();
         final String username = user.get(SessionManager.KEY_NAME);
+        String rights = session.getRights();
 
 
         switchView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -135,20 +136,17 @@ public class ControllerPower extends Fragment {
             delete.setVisibility(View.GONE);
             add.setVisibility(View.GONE);
             infolayout.setVisibility(View.VISIBLE);
-            System.out.println("AAAAAAA");
         }
         else if(my) {
             delete.setVisibility(View.VISIBLE);
-            System.out.println("BBBBB");
+
             add.setVisibility(View.GONE);
             infolayout.setVisibility(View.GONE);
-
-
         }
         else if(!my && !Cache.getInstance().myCjtSensores.exist(sensorItem.getId())) {
             add.setVisibility(View.VISIBLE);
-            System.out.println("CCCCCC");
-
+            delete.setVisibility(View.GONE);
+            infolayout.setVisibility(View.GONE);
 
         }
 
@@ -197,6 +195,8 @@ public class ControllerPower extends Fragment {
             }
         });
 
+        if(rights.equals("read"))
+            switchView.setEnabled(false);
 
         return view;
     }

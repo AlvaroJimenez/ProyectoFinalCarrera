@@ -27,7 +27,7 @@ public class MQTTServiceActuator extends Service {
     private static final String TAG = "MQTTServiceSensor";
     private Thread thread;
     private volatile IMqttAsyncClient mqttClient;
-    static final String M2MIO_DOMAIN = "Y2VlMTBkYjEtNDVjNi00N2E5LTk0YjEtMzBmOTI0NTUzMzg1YjU2YmE5NzUtOTEyZC00M2FmLWE0MGEtMzJiZjcwNWFkMDg0";
+    static final String M2MIO_DOMAIN = "Y2VlMTBkYjEtNDVjNi00N2E5LTk0YjEtMzBmOTI0NTUzMzg1YjU2YmE5NzUtOTEyZC00M2FmLWE0MGEtMzJiZjcwNWFkMDg";
     static String[] devices_id = null;
     static int[] qos = null;
     static final String M2MIO_THING = "actions";
@@ -44,25 +44,6 @@ public class MQTTServiceActuator extends Service {
     public void onCreate() {
 
         try {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             doConnect();
         } catch (MqttException e) {
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -146,12 +127,59 @@ public class MQTTServiceActuator extends Service {
         @Override
         @SuppressLint("NewApi")
         public void messageArrived(String topic, final MqttMessage msg) throws Exception {
-            Log.i(TAG, "Message arrived from topic" + topic);
+           // Log.i(TAG, "Message arrived from topic" + topic);
+
+            String id = topic.substring(0, 45);
+            Log.i(TAG, "ID " + id);
+            String sala = Cache.getInstance().allCjtSensores.getUbicacionById(id);
+            String tipo = Cache.getInstance().allCjtSensores.getNombreById(id);
+            Log.i(TAG, "Sala "+ sala);
+            Log.i(TAG, "Tipo "+ tipo);
             Log.i(TAG, "Message arrived from topic" + msg);
-            Cache.getInstance().notificationsList.addNotification(msg.toString());
+            JSONObject json = null;
+            String parameters = "-1";
+            String descripcion= "-1";
+            try{
+
+                if(tipo.equals("HVAC")) {
+                    json = new JSONObject(msg.toString());
+                    try {
+                        parameters = json.getString("parameters").substring(19, 21);
+                    }catch (Exception e)
+                    {
+
+                    }
+                    descripcion = json.getString("description");
+                    descripcion = descripcion.substring(16);
+                    int a = descripcion.indexOf('"');
+                    descripcion = descripcion.substring(0,a);
+
+                }
+                else if(tipo.equals("Light"))
+                {
+                    json = new JSONObject(msg.toString());
+                    descripcion = json.getString("description");
+                    descripcion = descripcion.substring(16);
+                    int a = descripcion.indexOf('"');
+                    descripcion = descripcion.substring(0, a);
+
+                }
+
+            Log.i(TAG, "Parameters "+ parameters);
+                Log.i(TAG, "Descripcion "+ descripcion);
+            }catch (JSONException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            if(!parameters.equals("-1") && !descripcion.equals("-1") )
+                Cache.getInstance().notificationsList.addNotification("Sala "+sala + " " + tipo + " new temperatue " +  parameters +" ºC");
+            else if(!descripcion.equals("-1"))
+                Cache.getInstance().notificationsList.addNotification("Sala "+sala + " " + tipo + " " + descripcion);
+
+           // Cache.getInstance().notificationsList.addNotification(msg.toString());
             //ActualizarDispositivos(topic, msg);
 
-          //  Cache.getInstance().mainActivity.Notification();
+            //Cache.getInstance().mainActivity.Notification();
 
         }
     }

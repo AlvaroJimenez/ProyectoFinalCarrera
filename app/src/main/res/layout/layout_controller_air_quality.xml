@@ -129,10 +129,10 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="GOOD QUALITY"
-            android:id="@+id/infoDevice"
+            android:id="@+id/infoDeviceAQ"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="35dp" />
+            android:layout_marginLeft="38dp" />
     </FrameLayout>
 
 

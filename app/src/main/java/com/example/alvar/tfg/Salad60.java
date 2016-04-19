@@ -37,7 +37,7 @@ public class Salad60 extends Fragment {
 
         TextView s1 = (TextView)view.findViewById(R.id.s001);
         TextView s2 = (TextView) view.findViewById(R.id.s002);
-        TextView s3 = (TextView) view.findViewById(R.id.s003);
+        TextView s3 = (TextView) view.findViewById(R.id.s203);
         TextView s3bis = (TextView) view.findViewById(R.id.s003BIS);
         TextView s4 = (TextView) view.findViewById(R.id.s004);
         TextView s5 = (TextView) view.findViewById(R.id.s005);
@@ -217,10 +217,10 @@ public class Salad60 extends Fragment {
         int c = 0;
         int d = 0;
 
-        if(cjtSensores.existTypeSensorBySala(sala))
-                a = R.drawable.s;
-        if(cjtSensores.existTypeActuatorBySala(sala))
-                b = R.drawable.a;
+        if(cjtSensores.existTypeSensorBySala(sala) && cjtSensores.existTypeActuatorBySala(sala))
+                a = R.drawable.a;
+        else if (cjtSensores.existTypeActuatorBySala(sala) && !cjtSensores.existTypeActuatorBySala(sala))
+                b = R.drawable.s;
 
 
         t.setCompoundDrawablesWithIntrinsicBounds(a,b,c,d);

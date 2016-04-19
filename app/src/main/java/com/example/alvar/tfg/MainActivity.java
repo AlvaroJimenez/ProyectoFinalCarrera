@@ -57,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
         session.checkLogin();
 
         HashMap<String, String> user = session.getUserDetails();
-
         // name
         username = user.get(SessionManager.KEY_NAME);
+
+        ConexionBD connUserData= new ConexionBD(username.toString(),getApplicationContext(),"");
+        connUserData.getUserData();
 
         MySensors = new MyCjtSensores();
         AllSensors = new AllCjtSensores();

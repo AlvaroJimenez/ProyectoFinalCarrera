@@ -101,22 +101,34 @@ import java.net.URLEncoder;
         {
             try {
 
-                System.out.println("JSON: " + s.toString());
+                System.out.println("JSON: " + s.toString() +" " + tipo);
                 JSONObject json = null;
                 json = new JSONObject(s);
-
                 JSONArray jsonarray = json.getJSONArray("data");
                 JSONObject data0 = jsonarray.getJSONObject(0);
 
                 if (tipo.equals("XM1000")) {
                     Double valueTemp = data0.getJSONObject("channels").getJSONObject("temperature").getDouble("current-value");
                     Double valueHum = data0.getJSONObject("channels").getJSONObject("humidity").getDouble("current-value");
-
-
-                    int pos = Cache.getInstance().myCjtSensores.getPosById(M2MIO_STUFF);
-                    Cache.getInstance().myCjtSensores.updateSensor(pos, valueTemp, valueHum);
-                } else if (tipo.equals("Computer") || tipo.equals("Light")) {
-                    int valor = json.getJSONObject("channels").getJSONObject("computer").getInt("current-value");
+                  //  int pos = Cache.getInstance().myCjtSensores.getPosById(M2MIO_STUFF);
+                    Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valueTemp, valueHum);
+                } else if (tipo.equals("Computer")) {
+                    int valor = data0.getJSONObject("channels").getJSONObject("computer").getInt("current-value");
+                    Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
+                }
+                else if(tipo.equals("Light"))
+                {
+                    int valor = data0.getJSONObject("channels").getJSONObject("light").getInt("current-value");
+                    Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
+                }
+                else if(tipo.equals("Presence"))
+                {
+                    int valor = data0.getJSONObject("channels").getJSONObject("presence").getInt("current-value");
+                    Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
+                }
+                else if(tipo.equals("AirQuality"))
+                {
+                    int valor = data0.getJSONObject("channels").getJSONObject("airquality").getInt("current-value");
                     Cache.getInstance().myCjtSensores.ActualizarDispositivo(M2MIO_STUFF, valor);
                 }
             } catch (JSONException e) {

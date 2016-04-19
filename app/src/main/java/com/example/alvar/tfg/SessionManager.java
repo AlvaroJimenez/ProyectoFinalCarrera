@@ -7,32 +7,27 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-public class SessionManager {
-    // Shared Preferences
-    SharedPreferences pref;
+    public class SessionManager {
+        // Shared Preferences
+        SharedPreferences pref;
+        // Editor for Shared preferences
+        Editor editor;
+        // Context
+        Context _context;
+        // Shared pref mode
+        int PRIVATE_MODE = 0;
+        // Sharedpref file name
+        private static final String PREF_NAME = "AndroidHivePref";
+        // All Shared Preferences Keys
+        private static final String IS_LOGIN = "IsLoggedIn";
+        // User name (make variable public to access from outside)
+        public static final String KEY_NAME = "name";
+        // Email address (make variable public to access from outside)
+        public static final String KEY_EMAIL = "email";
+        public static final String USER_ID = "-1";
+        public static final String RIGHTS = null;
+        public static final String APIKEY_USER = "-1";
 
-    // Editor for Shared preferences
-    Editor editor;
-
-    // Context
-    Context _context;
-
-    // Shared pref mode
-    int PRIVATE_MODE = 0;
-
-    // Sharedpref file name
-    private static final String PREF_NAME = "AndroidHivePref";
-
-    // All Shared Preferences Keys
-    private static final String IS_LOGIN = "IsLoggedIn";
-
-    // User name (make variable public to access from outside)
-    public static final String KEY_NAME = "name";
-
-    // Email address (make variable public to access from outside)
-    public static final String KEY_EMAIL = "email";
-
-    public static final String KEY_USER_ID = "-1";
 
     // Constructor
     public SessionManager(Context context) {
@@ -54,15 +49,17 @@ public class SessionManager {
         // Storing email in pref
         editor.putString(KEY_EMAIL, email);
 
+
         // commit changes
         editor.commit();
     }
 
-    public void setKeyUser(int id){
+    public void setUser(int id,String rights,String key){
 
-        // Storing id user in pref
-        editor.putInt(KEY_USER_ID, id);
-
+        editor.putInt(USER_ID, id);
+        editor.putString(RIGHTS, rights);
+        System.out.println("RIGHTS 2 " + rights);
+        editor.putString(APIKEY_USER, key);
         // commit changes
         editor.commit();
     }
@@ -74,19 +71,20 @@ public class SessionManager {
         HashMap<String, String> user = new HashMap<String, String>();
         // user name
         user.put(KEY_NAME, pref.getString(KEY_NAME, null));
-
         // user email id
         user.put(KEY_EMAIL, pref.getString(KEY_EMAIL, null));
-
         // return user
         return user;
     }
 
     public int getIDUser()
     {
-        return pref.getInt(KEY_USER_ID,0);
+        return pref.getInt(USER_ID,0);
+
     }
-    public String getUsername(){ return pref.getString(KEY_NAME,null);}
+    public String getUsername(){ return pref.getString(KEY_NAME, null);}
+    public String getRights(){ return pref.getString(RIGHTS,null);}
+    public String getKey(){ return pref.getString(APIKEY_USER,null);}
 
     /**
      * Check login method wil check user login status

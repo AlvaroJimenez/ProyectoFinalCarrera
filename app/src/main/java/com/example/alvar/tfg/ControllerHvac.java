@@ -66,6 +66,7 @@ public class ControllerHvac extends Fragment {
     private TextView ubicacion;
     private TextView statusHvac;
     private SwitchCompat switchView;
+    private ImageView locationRoom;
 
     public ControllerHvac(String id, Boolean my) {
 
@@ -99,7 +100,7 @@ public class ControllerHvac extends Fragment {
 
 
         tempSensorlabel = (TextView) view.findViewById(R.id.tempSensorLabel);
-      //  humSensorlabel = (TextView) view.findViewById(R.id.humSensorLabel);
+        humSensorlabel= (TextView) view.findViewById(R.id.humSensorLabel);
         FloatingActionButton delete = (FloatingActionButton)view.findViewById(R.id.deleteButton);
         FloatingActionButton add = (FloatingActionButton)view.findViewById(R.id.addButton);
         imageView = (ImageView) view.findViewById(R.id.DeviceIcon);
@@ -118,12 +119,14 @@ public class ControllerHvac extends Fragment {
         ubicacion.setText(sensorItem.getUbicacion());
 
         Double valuetemp = sensorItem.getTemperatura();
+        Double valuehum = sensorItem.getHumedad();
+
         tempSensorlabel.setText(String.format("%.2f ºC", valuetemp));
         tempSensorlabel.setTypeface(myTypeface);
 
-     //   Double valuehum = sensorItem.getHumedad();
-        //System.out.println("humedad " + valuehum);
-        //humSensorlabel.setText(String.format("%.2f %%",valuehum));
+
+        humSensorlabel.setText(String.format("%.2f %%", valuehum));
+        humSensorlabel.setTypeface(myTypeface);
 
 
         tempDigits.setTypeface(myTypeface);
@@ -132,12 +135,22 @@ public class ControllerHvac extends Fragment {
         buttonSend = (ButtonRectangle) view.findViewById(R.id.buttonSend);
      //   buttonSend.setText("ENVIAR");
 
+        locationRoom = (ImageView) view.findViewById(R.id.locationRoom);
+
 
         final SessionManager session = new SessionManager(getActivity().getApplicationContext());
         HashMap<String, String> user = session.getUserDetails();
         final String username = user.get(SessionManager.KEY_NAME);
+        String rights = session.getRights();
+
 
         seekbar = (SeekBar) view.findViewById(R.id.seekBar);
+
+        statusHvac.setText("OFF");
+        seekbar.setEnabled(false);
+        buttonSend.setEnabled(false);
+        buttonSend.setEnabled(false);
+        statusHvac.setTextColor(Color.rgb(255, 0, 0));
 
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -160,7 +173,6 @@ public class ControllerHvac extends Fragment {
             }
         });
 
-
         if(!my && Cache.getInstance().myCjtSensores.exist(sensorItem.getId())) {
             delete.setVisibility(View.GONE);
             add.setVisibility(View.GONE);
@@ -172,13 +184,12 @@ public class ControllerHvac extends Fragment {
             infolayout.setVisibility(View.GONE);
             System.out.println("BBBBB");
             add.setVisibility(View.GONE);
-
-
         }
         else if(!my && !Cache.getInstance().myCjtSensores.exist(sensorItem.getId())) {
             add.setVisibility(View.VISIBLE);
+            delete.setVisibility(View.GONE);
+            infolayout.setVisibility(View.INVISIBLE);
             System.out.println("CCCCCC");
-
 
         }
 
@@ -232,9 +243,9 @@ public class ControllerHvac extends Fragment {
             @Override
             public void onClick(View v) {
                 int result = 0;
-                String idActuator = Cache.getInstance().allCjtSensores.actuatorIdBySala(sensorItem.getUbicacion(),"HVAC");
-                System.out.println("idActuador "+ idActuator);
-                HttpRequestPut req = new HttpRequestPut(idActuator, Cache.getInstance().mainActivity, "Temperature",1, progress);
+                String idActuator = Cache.getInstance().allCjtSensores.actuatorIdBySala(sensorItem.getUbicacion(), "HVAC");
+                System.out.println("idActuador " + idActuator);
+                HttpRequestPut req = new HttpRequestPut(idActuator, Cache.getInstance().mainActivity, "Temperature", 1, progress);
                 try {
                     result = req.execute().get();
                 } catch (InterruptedException e1) {
@@ -243,7 +254,7 @@ public class ControllerHvac extends Fragment {
                     e1.printStackTrace();
                 }
 
-                if(result == 0)
+                if (result == 0)
                     Toast.makeText(getActivity(), "Connexion no disponible", Toast.LENGTH_SHORT).show();
             }
         });
@@ -281,16 +292,34 @@ public class ControllerHvac extends Fragment {
                     e1.printStackTrace();
                 }
 
-                if(result == 0) {
+                if (result == 0) {
                     Toast.makeText(getActivity(), "Connexion no disponible", Toast.LENGTH_SHORT).show();
                     switchView.setChecked(false);
 
                 }
-
-
             }
         });
 
+        locationRoom.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Fragment fragment = null;
+                fragment = new ControladorListaDispositivosSala(ubicacion.getText().toString(), " ");
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        if(rights.equals("read")){
+
+            buttonSend.setEnabled(false);
+            switchView.setEnabled(false);
+            seekbar.setEnabled(false);
+        }
 
 
         return view;

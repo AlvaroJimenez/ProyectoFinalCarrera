@@ -8,7 +8,7 @@
         android:layout_height="150dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:text="S101"
-        android:id="@+id/s201"
+        android:id="@+id/sS101"
         android:background="@drawable/my_border"
         android:autoText="false"
         android:layout_alignParentBottom="true"
@@ -19,21 +19,21 @@
         android:layout_height="100dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:text="S108"
-        android:id="@+id/S108"
+        android:id="@+id/sS109"
         android:background="@drawable/my_border"
         android:autoText="false"
-        android:layout_above="@+id/s201"
+        android:layout_above="@+id/sS101"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="100dp"
         android:layout_height="150dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:text="S102"
-        android:id="@+id/S115"
+        android:text="s102"
+        android:id="@+id/sS102"
         android:background="@drawable/my_border"
         android:autoText="false"
-        android:layout_above="@+id/S108"
+        android:layout_above="@+id/sS109"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -41,10 +41,10 @@
         android:layout_height="150dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:text="S103"
-        android:id="@+id/S103"
+        android:id="@+id/sS103"
         android:background="@drawable/my_border"
         android:autoText="false"
-        android:layout_above="@+id/S115"
+        android:layout_above="@+id/sS102"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
@@ -52,23 +52,23 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:text="S101B"
-        android:id="@+id/S101B"
+        android:text="s101B"
+        android:id="@+id/s101B"
         android:background="@drawable/my_border"
         android:autoText="false"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/s201" />
+        android:layout_toEndOf="@+id/sS101" />
 
     <TextView
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:text="S101A"
-        android:id="@+id/S101A"
+        android:id="@+id/s101A"
         android:background="@drawable/my_border"
         android:autoText="false"
-        android:layout_alignTop="@+id/s201"
-        android:layout_toEndOf="@+id/s201" />
+        android:layout_alignTop="@+id/sS101"
+        android:layout_toEndOf="@+id/sS101" />
 
     <TextView
         android:layout_width="150dp"
@@ -79,8 +79,8 @@
         android:background="@drawable/my_border"
         android:autoText="false"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/S101A"
-        android:layout_toEndOf="@+id/S101B" />
+        android:layout_alignTop="@+id/s101A"
+        android:layout_toEndOf="@+id/s101B" />
 
     <TextView
         android:layout_width="75dp"
@@ -102,14 +102,14 @@
         android:autoText="false"
         android:layout_above="@+id/gates1"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/s003" />
+        android:layout_below="@+id/s203" />
 
     <TextView
         android:layout_width="100dp"
         android:layout_height="150dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:text="003"
-        android:id="@+id/s003"
+        android:id="@+id/s203"
         android:background="@drawable/my_border"
         android:autoText="false"
         android:layout_alignParentTop="true"
@@ -120,21 +120,11 @@
         android:layout_height="100dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:text="S104"
-        android:id="@+id/S104"
+        android:id="@+id/s104"
         android:background="@drawable/my_border"
         android:autoText="false"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/S103" />
-
-    <TextView
-        android:layout_width="85dp"
-        android:layout_height="100dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:id="@+id/stairs1"
-        android:background="@drawable/stairs_u"
-        android:autoText="false"
-        android:layout_below="@+id/gates2"
-        android:layout_toEndOf="@+id/S104" />
+        android:layout_toEndOf="@+id/sS103" />
 
     <TextView
         android:layout_width="100dp"
@@ -144,7 +134,7 @@
         android:background="@drawable/stairs_r"
         android:autoText="false"
         android:layout_alignBottom="@+id/s002"
-        android:layout_toEndOf="@+id/s201" />
+        android:layout_toEndOf="@+id/sS101" />
 
     <TextView
         android:layout_width="100dp"
@@ -158,12 +148,12 @@
         android:layout_alignStart="@+id/stairs2" />
 
     <TextView
-        android:layout_width="85dp"
+        android:layout_width="82dp"
         android:layout_height="40dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:id="@+id/gates2"
         android:background="@drawable/gates_d"
         android:autoText="false"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/s003" />
+        android:layout_toStartOf="@+id/s203" />
 </RelativeLayout>

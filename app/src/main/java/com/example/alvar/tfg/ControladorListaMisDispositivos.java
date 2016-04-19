@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -15,7 +16,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
 public class ControladorListaMisDispositivos extends Fragment {
 
     private Activity myAct;
@@ -67,12 +67,8 @@ public class ControladorListaMisDispositivos extends Fragment {
         {
             info.setVisibility(View.VISIBLE);
         }
-
         final ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this.getActivity(), R.layout.text_view2, values);
-
-        listView.setAdapter(new AdaptadorListView(getView().getContext(),generateData()));
-
-
+        listView.setAdapter(new AdaptadorListView(getView().getContext(), generateData()));
         listView.setClickable(true);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -89,42 +85,37 @@ public class ControladorListaMisDispositivos extends Fragment {
                 SensorItem s;
 
 
-                if(Cache.getInstance().myCjtSensores.getNombreById(id).equals("Presence")){
+                if (Cache.getInstance().myCjtSensores.getNombreById(id).equals("Presence")) {
                     fragment = new ControllerPresence(id, true);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, fragment)
                             .addToBackStack(null)
                             .commit();
-                }
-                else if(Cache.getInstance().myCjtSensores.getNombreById(id).equals("XM1000")) {
+                } else if (Cache.getInstance().myCjtSensores.getNombreById(id).equals("XM1000")) {
                     fragment = new ControllerHvac(id, true);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, fragment)
                             .addToBackStack(null)
                             .commit();
-                }
-                else if(Cache.getInstance().myCjtSensores.getNombreById(id).equals("Power")) {
+                } else if (Cache.getInstance().myCjtSensores.getNombreById(id).equals("Power")) {
                     fragment = new ControllerPower(id, true);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, fragment)
                             .addToBackStack(null)
                             .commit();
-                }
-                else if(Cache.getInstance().myCjtSensores.getNombreById(id).equals("Light")) {
+                } else if (Cache.getInstance().myCjtSensores.getNombreById(id).equals("Light")) {
                     fragment = new ControllerLight(id, true);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, fragment)
                             .addToBackStack(null)
                             .commit();
-                }
-                else if(Cache.getInstance().myCjtSensores.getNombreById(id).equals("AirQuality")) {
+                } else if (Cache.getInstance().myCjtSensores.getNombreById(id).equals("AirQuality")) {
                     fragment = new ControllerAirQuality(id, true);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, fragment)
                             .addToBackStack(null)
                             .commit();
-                }
-                else {
+                } else {
                     fragment = new ControladorDetalleDispositivo(id, true);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, fragment)
@@ -133,6 +124,20 @@ public class ControladorListaMisDispositivos extends Fragment {
                 }
             }
         });
+
+        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                // TODO Auto-generated method stub
+            }
+
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+                // TODO Auto-generated method stub
+
+
+
+            }
+        });
+
 
         super.onActivityCreated(savedInstanceState);
     }
@@ -165,8 +170,6 @@ public class ControladorListaMisDispositivos extends Fragment {
 
         return models;
     }
-
-
 
 
 

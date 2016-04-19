@@ -28,7 +28,7 @@ public class ControllerAirQuality extends Fragment {
     private Button bttubicacion;
     private LinearLayout infoLayout;
     private ImageView imageView;
-    private  TextView infodevice;
+    private TextView infodevice;
     private boolean esActuador;
     private TextView nombre;
     private TextView ubicacion;
@@ -40,6 +40,7 @@ public class ControllerAirQuality extends Fragment {
         this.id = id;
         this.my = my;
         this.mainFragment = this;
+        infodevice = null;
     }
 
     @Override
@@ -76,11 +77,12 @@ public class ControllerAirQuality extends Fragment {
 
         imageView = (ImageView) view.findViewById(R.id.DeviceIcon);
 
-        infodevice = (TextView) view.findViewById(R.id.infodevice);
+        infodevice = (TextView) view.findViewById(R.id.infoDeviceAQ);
 
         int value = sensorItem.getValue();
 
         cambiarIcono(value);
+        System.out.println(value);
 
 
         final SessionManager session = new SessionManager(getActivity().getApplicationContext());
@@ -103,6 +105,8 @@ public class ControllerAirQuality extends Fragment {
         }
         else if(!my && !Cache.getInstance().myCjtSensores.exist(sensorItem.getId())) {
             add.setVisibility(View.VISIBLE);
+            delete.setVisibility(View.GONE);
+            infolayout.setVisibility(View.GONE);
             System.out.println("CCCCCC");
 
 
@@ -164,21 +168,18 @@ public class ControllerAirQuality extends Fragment {
 
     private void cambiarIcono(int value)
     {
-        if(value == 1) {
+        if(value == 2) {
             imageView.setImageResource(R.drawable.airquality1);
-            infodevice.setText("OPEN");
             infodevice.setText("GOOD QUALITY");
 
         }
-        else if(value == 2) {
+        else if(value == 1) {
             imageView.setImageResource(R.drawable.airquality2);
-            infodevice.setText("CLOSE");
             infodevice.setText("MEDIUM QUALITY");
         }
 
-        else if(value == 3) {
+        else if(value == 0) {
             imageView.setImageResource(R.drawable.airquality3);
-            infodevice.setText("CLOSE");
             infodevice.setText("BAD QUALITY");
         }
 

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -57,12 +58,8 @@ public class ControladorListaDispositivosSala extends Fragment {
         {
             info.setVisibility(View.VISIBLE);
         }
-
         final ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this.getActivity(), R.layout.text_view2, values);
-
         listView.setAdapter(new AdaptadorListView2(getView().getContext(),generateData()));
-
-
         listView.setClickable(true);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -78,47 +75,59 @@ public class ControladorListaDispositivosSala extends Fragment {
                 String id = valuesId[position];
                 SensorItem s;
 
-                if(Cache.getInstance().allCjtSensores.getNombreById(id).equals("Presence")){
-                    fragment = new ControllerPresence(id, false);
+                SessionManager session = new SessionManager(Cache.getInstance().mainActivity.getApplicationContext());
+
+                String rights = session.getRights();
+
+                System.out.println("PERMISOS " + rights);
+
+                if (!sala.equals(rights) && !rights.equals("admin") && !rights.equals("read")) {
+                    fragment = new Fragment3();
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, fragment)
                             .addToBackStack(null)
                             .commit();
-                }
-                else if(Cache.getInstance().allCjtSensores.getNombreById(id).equals("XM1000")) {
-                    fragment = new ControllerHvac(id, false);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.content_frame, fragment)
-                            .addToBackStack(null)
-                            .commit();
-                }
-                else if(Cache.getInstance().allCjtSensores.getNombreById(id).equals("Power")) {
-                    fragment = new ControllerPower(id, false);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.content_frame, fragment)
-                            .addToBackStack(null)
-                            .commit();
-                }
-                else if(Cache.getInstance().allCjtSensores.getNombreById(id).equals("Light")) {
-                    fragment = new ControllerLight(id, false);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.content_frame, fragment)
-                            .addToBackStack(null)
-                            .commit();
-                }
-                else if(Cache.getInstance().allCjtSensores.getNombreById(id).equals("AirQuality")) {
-                    fragment = new ControllerAirQuality(id, false);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.content_frame, fragment)
-                            .addToBackStack(null)
-                            .commit();
-                }
-                else {
-                    fragment = new ControladorDetalleDispositivo(id, false);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.content_frame, fragment)
-                            .addToBackStack(null)
-                            .commit();
+
+                } else if (sala.equals(rights) || rights.equals("admin") || rights.equals("read")) {
+
+
+                    if (Cache.getInstance().allCjtSensores.getNombreById(id).equals("Presence")) {
+                        fragment = new ControllerPresence(id, false);
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_frame, fragment)
+                                .addToBackStack(null)
+                                .commit();
+                    } else if (Cache.getInstance().allCjtSensores.getNombreById(id).equals("XM1000")) {
+                        fragment = new ControllerHvac(id, false);
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_frame, fragment)
+                                .addToBackStack(null)
+                                .commit();
+                    } else if (Cache.getInstance().allCjtSensores.getNombreById(id).equals("Power")) {
+                        fragment = new ControllerPower(id, false);
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_frame, fragment)
+                                .addToBackStack(null)
+                                .commit();
+                    } else if (Cache.getInstance().allCjtSensores.getNombreById(id).equals("Light")) {
+                        fragment = new ControllerLight(id, false);
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_frame, fragment)
+                                .addToBackStack(null)
+                                .commit();
+                    } else if (Cache.getInstance().allCjtSensores.getNombreById(id).equals("AirQuality")) {
+                        fragment = new ControllerAirQuality(id, false);
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_frame, fragment)
+                                .addToBackStack(null)
+                                .commit();
+                    } else {
+                        fragment = new ControladorDetalleDispositivo(id, false);
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_frame, fragment)
+                                .addToBackStack(null)
+                                .commit();
+                    }
                 }
             }
         });

@@ -26,13 +26,13 @@ public class  UpdateDevice {
                     http.execute();
                 //}
             }
-            for (int i = 0; i < Cache.getInstance().allCjtSensores.getSize(); ++i) {
+           /* for (int i = 0; i < Cache.getInstance().allCjtSensores.getSize(); ++i) {
                 System.out.println("all sensors " + i);
                 if (Cache.getInstance().allCjtSensores.getTypeByPos(i).equals("s")){
                     HttpRequestAllDevices http2 = new HttpRequestAllDevices(Cache.getInstance().allCjtSensores.getIDByPos(i), Cache.getInstance().mainActivity, Cache.getInstance().allCjtSensores.getNombreByPos(i));
                     http2.execute();
                 }
-            }
+            }*/
 
         } catch (Exception e) {
             throw e;

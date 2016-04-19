@@ -101,6 +101,8 @@ public class ControllerLight extends Fragment {
         final SessionManager session = new SessionManager(getActivity().getApplicationContext());
         HashMap<String, String> user = session.getUserDetails();
         final String username = user.get(SessionManager.KEY_NAME);
+        String rights = session.getRights();
+
 
 
         switchView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -206,6 +208,13 @@ public class ControllerLight extends Fragment {
                         .show();
             }
         });
+
+
+        if(rights.equals("read")){
+
+            switchView.setEnabled(false);
+
+        }
 
 
         return view;

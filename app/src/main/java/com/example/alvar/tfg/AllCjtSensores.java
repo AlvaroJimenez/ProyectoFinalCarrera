@@ -21,6 +21,7 @@ public class AllCjtSensores {
     public void setCjtSensores(String id, String nombre, String ubicacion, int i,String tipology)
     {
         String resultU = ubicacion.substring(ubicacion.lastIndexOf("/") + 1);
+        System.out.println(resultU);
         SensorItem item = new SensorItem(id,nombre,resultU,tipology);
         ListSensors.add(i,item);
 
@@ -43,7 +44,7 @@ public class AllCjtSensores {
     {
         int size = 0;
         for(int i=0;i<ListSensors.size();++i) {
-            if (ListSensors.get(i).getUbicacion().equals(sala))
+            if (ListSensors.get(i).getUbicacion().equals(sala) && ListSensors.get(i).getType().equals("s"))
                 size++;
 
         }
@@ -51,7 +52,7 @@ public class AllCjtSensores {
         String[] values= new String[size];
         int j = 0;
         for(int i=0;i<ListSensors.size();++i) {
-            if(ListSensors.get(i).getUbicacion().equals(sala)) {
+            if(ListSensors.get(i).getUbicacion().equals(sala)  && ListSensors.get(i).getType().equals("s")) {
                 values[j] = String.valueOf((Html.fromHtml(ListSensors.get(i).getNombre() + "\n" + ListSensors.get(i).getUbicacion())));
                 ++j;
             }
@@ -78,7 +79,7 @@ public class AllCjtSensores {
         String[] values= new String[size];
         int j = 0;
         for(int i=0;i<ListSensors.size();++i) {
-            if(ListSensors.get(i).getUbicacion().equals(sala) || sala.equals(" ")) {
+            if(ListSensors.get(i).getUbicacion().equals(sala)  && ListSensors.get(i).getType().equals("s")) {
                 values[j] = ListSensors.get(i).getId();
                 ++j;
             }

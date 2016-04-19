@@ -102,14 +102,12 @@ public class ControllerPresence extends Fragment {
             System.out.println("BBBBB");
             infolayout.setVisibility(View.GONE);
             add.setVisibility(View.GONE);
-
-
         }
         else if(!my && !Cache.getInstance().myCjtSensores.exist(sensorItem.getId())) {
             add.setVisibility(View.VISIBLE);
+            delete.setVisibility(View.GONE);
+            infolayout.setVisibility(View.GONE);
             System.out.println("CCCCCC");
-
-
         }
 
         delete.setOnClickListener(new View.OnClickListener() {

@@ -12,9 +12,9 @@ public final class R {
 		public static final int dialog_main_show_amination = 0x7f05000f;
 		public static final int dialog_root_hide_amin = 0x7f050010;
 		public static final int dialog_root_show_amin = 0x7f050011;
-		public static final int progress_indeterminate_animation = 0x7f050012;
-		public static final int snackbar_hide_animation = 0x7f050013;
-		public static final int snackbar_show_animation = 0x7f050014;
+		public static final int progress_indeterminate_animation = 0x7f050013;
+		public static final int snackbar_hide_animation = 0x7f050014;
+		public static final int snackbar_show_animation = 0x7f050015;
 	}
 	public static final class attr {
 		public static final int animate = 0x7f010080;
@@ -60,20 +60,20 @@ public final class R {
 		public static final int blue = 0x7f0f00ad;
 		public static final int button_accept = 0x7f0f00b7;
 		public static final int button_cancel = 0x7f0f00b6;
-		public static final int buttonflat = 0x7f0f0162;
+		public static final int buttonflat = 0x7f0f015a;
 		public static final int contentDialog = 0x7f0f00b3;
 		public static final int contentSelector = 0x7f0f00a9;
 		public static final int dialog_rootView = 0x7f0f00b2;
 		public static final int green = 0x7f0f00ac;
 		public static final int message = 0x7f0f00b5;
 		public static final int message_scrollView = 0x7f0f00b4;
-		public static final int number_indicator_spinner_content = 0x7f0f010e;
-		public static final int progressBarCircularIndetermininate = 0x7f0f010f;
+		public static final int number_indicator_spinner_content = 0x7f0f0111;
+		public static final int progressBarCircularIndetermininate = 0x7f0f0112;
 		public static final int red = 0x7f0f00ab;
 		public static final int rootSelector = 0x7f0f00a8;
-		public static final int shape_bacground = 0x7f0f0165;
-		public static final int snackbar = 0x7f0f0161;
-		public static final int text = 0x7f0f00fe;
+		public static final int shape_bacground = 0x7f0f015d;
+		public static final int snackbar = 0x7f0f0159;
+		public static final int text = 0x7f0f0101;
 		public static final int title = 0x7f0f0077;
 		public static final int viewColor = 0x7f0f00aa;
 	}
